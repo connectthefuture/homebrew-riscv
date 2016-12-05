@@ -13,7 +13,7 @@ script:
   - brew reinstall --build-from-source riscv-isa-sim
   - brew uninstall --ignore-dependencies riscv-gcc
   # avoid timeouts during long gcc build
-  - ./brew-install.sh riscv-gcc
+  - brew-install.sh riscv-gcc
   # - travis_wait 60 brew reinstall --build-from-source riscv-gcc
   - brew reinstall --build-from-source riscv-pk
   - rm -f hello.c a.out

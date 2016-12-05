@@ -3,9 +3,10 @@ language: objective-c
 osx_image: xcode8
 
 script:
+  - uname -a
   - brew update
   - brew tap riscv/riscv
-  - travis_wait 60 brew install riscv-tools
+  - brew install riscv-tools
   - brew test riscv-tools
   # now rebuild (instead of from pre-built binaries)
   - brew reinstall --build-from-source riscv-fesvr
